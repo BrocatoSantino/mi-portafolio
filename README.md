@@ -1,6 +1,6 @@
 # Santino Brocato | Portafolio Personal
 
-Portafolio web personal enfocado en desarrollo web a medida con precisión de ingeniería. Diseñado para mostrar proyectos recientes (como AURA Boutique y NexaDigital) de una forma limpia, rápida y profesional.
+Portafolio web personal enfocado en desarrollo web a medida.
 
 ## Tecnologías Utilizadas
 
