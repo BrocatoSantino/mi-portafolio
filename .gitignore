@@ -14,3 +14,6 @@ Thumbs.db
 
 # Dependencies (if added later)
 node_modules/
+
+# Agent Skills and Configuration
+.agents/
