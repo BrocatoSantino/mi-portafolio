@@ -1,114 +1,17 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portafolio de Santino Brocato — Desarrollo Web a Medida con precisión de ingeniería.">
-    <title>Santino Brocato | Desarrollo Web a Medida</title>
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Styles -->
-    <link rel="stylesheet" href="style.css?v=20">
-</head>
-<body>
-    <!-- Fixed Navigation Header -->
-    <header class="nav-header">
-        <div style="display: flex; align-items: center; justify-content: space-between; width: 100%; padding: 0 5%;">
-            <!-- 3-line Hamburger Button -->
-            <button id="menu-toggle-btn" class="hamburger-btn" aria-label="Abrir menú de navegación" style="position: relative; z-index: 1100;">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+import re
 
-            <!-- Brand Logo / Name -->
-            <a href="#hero" class="nav-logo-text">Santino Brocato</a>
-            <div style="width: 28px;"></div> <!-- Spacer balance -->
-        </div>
-    </header>
+with open('/home/arkadain/portfolio/index.html', 'r', encoding='utf-8') as f:
+    content = f.read()
 
-    <!-- Dropdown Navigation Panel -->
-    <div id="nav-panel" class="nav-menu-panel">
-        <a href="#hero" class="nav-menu-link">
-            <span>Inicio</span>
-        </a>
-        <a href="#sobre-mi" class="nav-menu-link">
-            <span>Sobre Mí</span>
-        </a>
-        <a href="#proyectos" class="nav-menu-link">
-            <span>Recientes</span>
-        </a>
-        <a href="#todos-los-trabajos" class="nav-menu-link">
-            <span>Todos los Trabajos</span>
-        </a>
-        <a href="#contacto" class="nav-menu-link">
-            <span>Contacto</span>
-        </a>
-    </div>
-
-    <main style="padding-top: 70px;">
-        <!-- Hero Section -->
-        <section id="hero" class="hero container">
-            <div class="hero-content">
-                <span class="pre-title">Hola, soy Santino Brocato</span>
-                <h1>Desarrollo web a medida con precisión de ingeniería.</h1>
-                <p>Estudiante de Ingeniería en Sistemas creando experiencias digitales únicas, rápidas y escalables para negocios que buscan destacar con una solución robusta y profesional.</p>
-                
-                <div class="hero-actions">
-                    <a href="#proyectos" class="btn btn-primary">Ver mis trabajos</a>
-                    <a href="https://wa.me/5493329304923?text=Hola%20Santino!%20Vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20consultarte%20por..." target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="display: inline-flex; items-center; gap: 0.5rem;">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
-                        WhatsApp
-                    </a>
-                    <a href="https://github.com/brocatosantino" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="display: inline-flex; items-center; gap: 0.5rem;">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-                        GitHub
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Sobre Mí -->
-        <section id="sobre-mi" class="container">
-            <h2>Más allá del código.</h2>
-            <p>Actualmente cursando mi segundo año de Ingeniería en Sistemas de Información, combino la lógica estructurada de la ingeniería con el diseño moderno. Me especializo en transformar ideas complejas en páginas web intuitivas y eficientes, programadas a medida para resolver problemas reales.</p>
-            
-            <div class="tags">
-                <span class="tag">
-                    <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
-                    Desarrollo Web a Medida
-                </span>
-                <span class="tag">
-                    <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
-                    Python
-                </span>
-                <span class="tag">
-                    <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
-                    Vanilla CSS / TailwindCSS
-                </span>
-                <span class="tag">
-                    <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><polyline points="10 13 8 15 10 17"></polyline><polyline points="14 13 16 15 14 17"></polyline></svg>
-                    HTML5 / JavaScript
-                </span>
-                <span class="tag">
-                    <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
-                    Arquitectura UX
-                </span>
-            </div>
-        </section>
-
-                        <!-- Proyectos -->
+# 1. Update #proyectos
+proyectos_html = """        <!-- Proyectos -->
         <section id="proyectos" class="container">
             <h2>Trabajos Recientes</h2>
             <div class="projects-grid">
                 <!-- Proyecto 1: TurnoFlow WhatsApp Bot -->
                 <article class="project-card">
                     <div class="project-image">
-                        <img src="assets/img/whatsapp-bot-mockup.png" alt="Vista previa de TurnoFlow WhatsApp Bot">
+                        <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=800&auto=format&fit=crop" alt="Vista previa de TurnoFlow WhatsApp Bot">
                     </div>
                     <div class="project-content">
                         <h3>TurnoFlow WhatsApp Bot</h3>
@@ -164,16 +67,17 @@
                     </div>
                 </article>
             </div>
-        </section>
+        </section>"""
 
-                <!-- Todos los trabajos -->
+# 2. Update #todos-los-trabajos
+todos_html = """        <!-- Todos los trabajos -->
         <section id="todos-los-trabajos" class="container">
             <h2>Todos los Trabajos</h2>
             <div class="projects-grid">
                 <!-- P1 -->
                 <article class="project-card">
                     <div class="project-image">
-                        <img src="assets/img/whatsapp-bot-mockup.png" alt="Vista previa de TurnoFlow WhatsApp Bot">
+                        <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=800&auto=format&fit=crop" alt="Vista previa de TurnoFlow WhatsApp Bot">
                     </div>
                     <div class="project-content">
                         <h3>TurnoFlow WhatsApp Bot</h3>
@@ -287,34 +191,15 @@
                     </div>
                 </article>
             </div>
-        </section>
+        </section>"""
 
-        <!-- Contacto -->
-        <section id="contacto" class="container">
-            <div class="contact-section">
-                <h2>¿Listo para crear algo increíble?</h2>
-                <p>Si tienes un proyecto en mente o necesitas una página web a medida, envíame un mensaje por email o WhatsApp y evaluemos cómo puedo ayudarte a alcanzar tus objetivos.</p>
-                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 1.5rem;">
-                    <a href="mailto:santinobrocato15@gmail.com" class="btn btn-primary">
-                        Enviar Email
-                    </a>
-                    <a href="https://wa.me/5493329304923?text=Hola%20Santino!%20Vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20consultarte%20por..." target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="border-color: #25d366; color: #25d366;">
-                        Enviar WhatsApp
-                    </a>
-                </div>
-            </div>
-        </section>
-    </main>
+content = re.sub(r'<!-- Proyectos -->\s*<section id="proyectos" class="container">.*?</section>', proyectos_html, content, flags=re.DOTALL)
+content = re.sub(r'<!-- Todos los trabajos -->\s*<section id="todos-los-trabajos" class="container">.*?</section>', todos_html, content, flags=re.DOTALL)
 
-    <footer class="container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
-        <p>&copy; 2026 Santino Brocato. Portafolio de Desarrollo Web.</p>
-        <a href="https://github.com/brocatosantino" target="_blank" rel="noopener noreferrer" style="color: var(--text-secondary); display: flex; align-items: center; gap: 0.5rem;">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-            github.com/brocatosantino
-        </a>
-    </footer>
+# Bump cache
+content = re.sub(r'style\.css\?v=\d+', 'style.css?v=20', content)
 
-    <!-- Scripts -->
-    <script src="main.js?v=2"></script>
-</body>
-</html>
+with open('/home/arkadain/portfolio/index.html', 'w', encoding='utf-8') as f:
+    f.write(content)
+
+print("Updated sections")
