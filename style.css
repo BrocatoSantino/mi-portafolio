@@ -865,25 +865,65 @@ footer {
     margin-top: var(--space-6);
   }
 
+  /* Explicitly enforce container padding on mobile to fix edge touching */
+  .container {
+    padding-left: var(--space-6) !important;
+    padding-right: var(--space-6) !important;
+  }
+
   /* Adjust Section Paddings for mobile */
   .section-padding {
-    padding: var(--space-12) 0;
+    padding-top: var(--space-12);
+    padding-bottom: var(--space-12);
   }
   .contact-box {
-    padding: var(--space-12) 0;
+    padding-top: var(--space-12);
+    padding-bottom: var(--space-12);
   }
   .contact-box h2 {
     font-size: 2.5rem;
   }
 
-  /* Grid Layouts - Evitar overflow horizontal */
-  .projects-grid {
-    grid-template-columns: 1fr;
-    gap: var(--space-6);
+  .projects-grid, .archive-grid {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    gap: var(--space-4);
+    padding-bottom: var(--space-6);
+    
+    /* Full bleed scroll */
+    margin-left: calc(-1 * var(--space-6));
+    margin-right: calc(-1 * var(--space-6));
+    padding-left: var(--space-6);
+    padding-right: var(--space-6);
+    
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
   }
-  .archive-grid {
-    grid-template-columns: 1fr;
-    gap: var(--space-6);
+  .projects-grid::-webkit-scrollbar,
+  .archive-grid::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .project-card {
+    flex: 0 0 85vw;
+    scroll-snap-align: start;
+  }
+  
+  .archive-card {
+    flex: 0 0 75vw;
+    scroll-snap-align: start;
+  }
+
+  /* El truco definitivo para el margen derecho en WebKit (iOS/Safari) */
+  .projects-grid::after,
+  .archive-grid::after {
+    content: "";
+    display: block;
+    flex: 0 0 1px;
+    padding-right: calc(var(--space-6) - 1px);
   }
 
   .project-image {

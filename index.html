@@ -32,7 +32,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="style.css?v=83">
+    <link rel="stylesheet" href="style.css?v=94">
 </head>
 <body>
     
@@ -53,8 +53,9 @@
     <!-- Full Screen Nav Panel -->
     <nav class="nav-panel" id="nav-panel">
         <ul class="nav-menu">
-            <li><a href="#proyectos" class="nav-menu-link">Recientes</a></li>
-            <li><a href="#todos-los-trabajos" class="nav-menu-link">Archivo</a></li>
+            <li><a href="#proyectos" class="nav-menu-link">Destacados</a></li>
+            <li><a href="#webs" class="nav-menu-link">Webs & Landings</a></li>
+            <li><a href="#apis" class="nav-menu-link">APIs & Bots</a></li>
             <li><a href="#contacto" class="nav-menu-link">Contacto</a></li>
         </ul>
     </nav>
@@ -113,8 +114,11 @@
                         </div>
                     </div>
                     
-                    <div class="hero-actions gsap-reveal">
-                        <a href="#proyectos" class="btn btn-primary magnetic-btn">
+                    <div class="hero-actions gsap-reveal" style="flex-wrap: wrap;">
+                        <a href="#contacto" class="btn btn-primary magnetic-btn">
+                            <span class="magnetic-text">Contactar</span>
+                        </a>
+                        <a href="#proyectos" class="btn btn-secondary magnetic-btn">
                             <span class="magnetic-text">Ver Proyectos</span>
                         </a>
                         <a href="https://github.com/BrocatoSantino" target="_blank" rel="noopener noreferrer" class="btn btn-secondary magnetic-btn">
@@ -188,24 +192,13 @@
 
             <!-- Archivo (Grid Pequeño con Imágenes) -->
             <section id="todos-los-trabajos" class="container section-padding">
-                <div class="section-header gsap-fade">
-                    <h2>Archivo Completo</h2>
+                <div class="section-header gsap-fade" id="webs">
+                    <h2>Páginas Web & Landings</h2>
                     <div class="section-line"></div>
                 </div>
                 
-                <div class="archive-grid">
-                    <!-- Archive P1: TurnoFlow -->
-                    <article class="archive-card gsap-fade project-interactive" data-project="whatsapp-bot">
-                        <div class="archive-img">
-                            <img src="assets/img/whatsapp-bot-mockup.png" alt="TurnoFlow Bot">
-                        </div>
-                        <div class="archive-info">
-                            <h4>TurnoFlow Bot</h4>
-                            <p>SaaS Booking</p>
-                        </div>
-                    </article>
-
-                    <!-- Archive P2: StudioArq -->
+                <div class="archive-grid" style="margin-bottom: 5rem;">
+                    <!-- Archive: StudioArq -->
                     <article class="archive-card gsap-fade project-interactive" data-project="StudioArq-landing">
                         <div class="archive-img">
                             <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=800&auto=format&fit=crop" alt="StudioArq">
@@ -216,7 +209,7 @@
                         </div>
                     </article>
 
-                    <!-- Archive P3: Lumière Estética -->
+                    <!-- Archive: Lumière Estética -->
                     <article class="archive-card gsap-fade project-interactive" data-project="lumiere-aesthetics-landing">
                         <div class="archive-img">
                             <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=800&auto=format&fit=crop" alt="Lumière Estética">
@@ -227,7 +220,7 @@
                         </div>
                     </article>
 
-                    <!-- Archive P4: NexaDigital -->
+                    <!-- Archive: NexaDigital -->
                     <article class="archive-card gsap-fade project-interactive" data-project="nexadigital-landing-page">
                         <div class="archive-img">
                             <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800" alt="NexaDigital">
@@ -238,29 +231,7 @@
                         </div>
                     </article>
 
-                    <!-- Archive P4: Weather API -->
-                    <article class="archive-card gsap-fade project-interactive" data-project="weather-api-wrapper">
-                        <div class="archive-img">
-                            <img src="assets/img/weather-mockup.png" alt="Weather API">
-                        </div>
-                        <div class="archive-info">
-                            <h4>Weather API Wrapper</h4>
-                            <p>FastAPI & Visual Crossing</p>
-                        </div>
-                    </article>
-
-                    <!-- Archive P2: To-Do List API -->
-                    <article class="archive-card gsap-fade project-interactive" data-project="to-do-list-API">
-                        <div class="archive-img">
-                            <img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=80&w=800&auto=format&fit=crop" alt="To-Do List API">
-                        </div>
-                        <div class="archive-info">
-                            <h4>To-Do List API</h4>
-                            <p>FastAPI & SQLAlchemy</p>
-                        </div>
-                    </article>
-
-                    <!-- Archive P3: Cortes & Co -->
+                    <!-- Archive: Cortes & Co -->
                     <article class="archive-card gsap-fade project-interactive" data-project="CortesAndCo">
                         <div class="archive-img">
                             <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?q=80&w=800&auto=format&fit=crop" alt="Cortes & Co.">
@@ -271,7 +242,7 @@
                         </div>
                     </article>
 
-                    <!-- Archive P4: ServicioYa -->
+                    <!-- Archive: ServicioYa -->
                     <article class="archive-card gsap-fade project-interactive" data-project="ServicioYa-landing">
                         <div class="archive-img">
                             <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=800&auto=format&fit=crop" alt="ServicioYa">
@@ -282,7 +253,7 @@
                         </div>
                     </article>
 
-                    <!-- Archive P5: AURA Boutique -->
+                    <!-- Archive: AURA Boutique -->
                     <article class="archive-card gsap-fade project-interactive" data-project="aura-boutique-catalog">
                         <div class="archive-img">
                             <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&q=80&w=800" alt="AURA Boutique">
@@ -290,6 +261,46 @@
                         <div class="archive-info">
                             <h4>AURA Boutique</h4>
                             <p>Catálogo Moda</p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="section-header gsap-fade" id="apis">
+                    <h2>APIs & Bots</h2>
+                    <div class="section-line"></div>
+                </div>
+                
+                <div class="archive-grid" style="margin-bottom: 5rem;">
+                    <!-- Archive: TurnoFlow -->
+                    <article class="archive-card gsap-fade project-interactive" data-project="whatsapp-bot">
+                        <div class="archive-img">
+                            <img src="assets/img/whatsapp-bot-mockup.png" alt="TurnoFlow Bot">
+                        </div>
+                        <div class="archive-info">
+                            <h4>TurnoFlow Bot</h4>
+                            <p>SaaS Booking</p>
+                        </div>
+                    </article>
+
+                    <!-- Archive: Weather API -->
+                    <article class="archive-card gsap-fade project-interactive" data-project="weather-api-wrapper">
+                        <div class="archive-img">
+                            <img src="assets/img/weather-mockup.png" alt="Weather API">
+                        </div>
+                        <div class="archive-info">
+                            <h4>Weather API Wrapper</h4>
+                            <p>FastAPI & Visual Crossing</p>
+                        </div>
+                    </article>
+
+                    <!-- Archive: To-Do List API -->
+                    <article class="archive-card gsap-fade project-interactive" data-project="to-do-list-API">
+                        <div class="archive-img">
+                            <img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=80&w=800&auto=format&fit=crop" alt="To-Do List API">
+                        </div>
+                        <div class="archive-info">
+                            <h4>To-Do List API</h4>
+                            <p>FastAPI & SQLAlchemy</p>
                         </div>
                     </article>
                 </div>
@@ -363,6 +374,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     
     <!-- Main Logic -->
-    <script src="main.js?v=83"></script>
+    <script src="main.js?v=85"></script>
 </body>
 </html>
