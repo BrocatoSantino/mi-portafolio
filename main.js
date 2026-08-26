@@ -112,6 +112,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     setFooterReveal();
     window.addEventListener('resize', setFooterReveal);
+    window.addEventListener('load', () => {
+        setFooterReveal();
+        if (typeof ScrollTrigger !== 'undefined') ScrollTrigger.refresh();
+    });
 
     // 1. Hero Entrance Timeline
     const tl = gsap.timeline({ defaults: { ease: "power4.out", duration: 1.2 } });
