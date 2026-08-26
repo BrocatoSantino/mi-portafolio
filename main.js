@@ -40,6 +40,14 @@ const projectsData = {
         demo: "https://brocatosantino.github.io/StudioArq-landing/",
         github: "https://github.com/BrocatoSantino/StudioArq-landing"
     },
+    "lumiere-aesthetics-landing": {
+        title: "Lumière Estética",
+        subtitle: "Medicina Estética & Lujo",
+        description: "<p>Una landing page de ultra alta fidelidad diseñada para un centro de estética y medicina avanzada. El proyecto está construido para reflejar exclusividad y lujo, utilizando tecnologías de frontend puras para garantizar el máximo rendimiento y la mejor experiencia de usuario.</p><ul><li><strong>Animaciones GSAP:</strong> Revelación de elementos en scroll y efecto parallax.</li><li><strong>Scroll Sedoso (Lenis):</strong> Desplazamiento suave de alto rendimiento.</li><li><strong>Cursor Magnético:</strong> Interacción dinámica con físicas de resortes.</li><li><strong>Dark Mode Ready:</strong> Sistema de gestión de temas mediante variables CSS nativas.</li></ul>",
+        tags: ["HTML5", "CSS3", "GSAP", "Lenis"],
+        demo: "https://brocatosantino.github.io/lumiere-aesthetics-landing/",
+        github: "https://github.com/BrocatoSantino/lumiere-aesthetics-landing"
+    },
     "nexadigital-landing-page": {
         title: "NexaDigital",
         subtitle: "Agencia de Marketing",
