@@ -456,16 +456,7 @@ footer {
   gap: var(--space-4);
 }
 
-@media (max-width: 768px) {
-  .hero-actions, .contact-actions {
-    flex-direction: column;
-  }
-  .archive-item {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: var(--space-4);
-  }
-}
+/* Media queries movidas al final del archivo para asegurar precedencia */
 
 /* ====== NUEVOS ESTILOS FASE 2 ====== */
 
@@ -833,4 +824,79 @@ footer {
 }
 .project-interactive {
   cursor: pointer;
+}
+
+/* ====== MOBILE RESPONSIVE FIXES ====== */
+@media (max-width: 768px) {
+  /* Hero & Buttons */
+  .hero-actions, .contact-actions {
+    flex-direction: column;
+  }
+  .archive-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-4);
+  }
+  .hero-title {
+    font-size: clamp(3rem, 12vw, 4rem);
+  }
+  .tech-marquee-wrapper {
+    margin-top: var(--space-6);
+  }
+
+  /* Grid Layouts - Evitar overflow horizontal */
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  .archive-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Modal Fixes */
+  .modal-content {
+    width: 95%;
+    max-height: 90vh;
+  }
+  .modal-header {
+    flex-direction: column;
+    padding: var(--space-4);
+    gap: var(--space-4);
+  }
+  .modal-header-text {
+    padding-right: 3.5rem; /* Dejar espacio para la X absoluta */
+  }
+  .modal-title {
+    font-size: 2rem;
+  }
+  .modal-subtitle {
+    font-size: 0.9rem;
+  }
+  .modal-scroll-area {
+    padding: var(--space-4);
+  }
+  .modal-header-actions {
+    width: 100%;
+    justify-content: flex-start;
+  }
+  .modal-links {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .modal-links .btn {
+    flex: 1;
+    text-align: center;
+    justify-content: center;
+  }
+  .modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+  }
+
+  /* Footer */
+  .footer-content {
+    flex-direction: column;
+    gap: var(--space-4);
+    text-align: center;
+  }
 }
